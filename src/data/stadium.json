@@ -1,0 +1,880 @@
+{
+  "$comment": "Saracoğlu Koltuktan Görünüm — tek doğruluk kaynağı. Birimler metre/derece. { \"value\": n, \"estimate\": true } tahmini değer demektir; gerçek değeri bulunca düz sayı yazın. Ayrıntılar: README.md",
+  "schemaVersion": 1,
+  "meta": {
+    "name": "Şükrü Saracoğlu Stadyumu",
+    "capacity": 47911,
+    "northAngle": {
+      "value": 25,
+      "estimate": true,
+      "note": "Kuzey tribünü yönünün gerçek kuzeye göre batıya sapması (uydu görüntüsünden). Aşama 1'de kullanılmıyor."
+    },
+    "note": "Koordinatlar: orijin saha merkezi (çim). +x Spor Toto'ya, +z Fenerium'a, +y yukarı. Maraton -z tarafında."
+  },
+  "colors": {
+    "grassLight": "#4f8a3a",
+    "grassDark": "#407a30",
+    "line": "#f4f6f2",
+    "ground": "#7b8087",
+    "concrete": "#a3a7ad",
+    "riser": "#868b93",
+    "skyTop": "#6fa6df",
+    "skyHorizon": "#dce8f3"
+  },
+  "defaults": {
+    "seatWidth": {
+      "value": 0.5,
+      "estimate": true,
+      "note": "Koltuk aralığı (merkezden merkeze). UEFA önerisi en az 0,45–0,50 m."
+    },
+    "seatOffset": {
+      "value": 0.45,
+      "estimate": true,
+      "note": "Basamak ön kenarından koltuk oturağı merkezine yatay mesafe."
+    },
+    "seatsFrom": "left",
+    "align": "center",
+    "maxAisleWidth": 2,
+    "eyeHeight": 1.2,
+    "standingEyeHeight": {
+      "value": 1.6,
+      "estimate": true,
+      "note": "Ayakta göz yüksekliği (basamak zemininden)."
+    }
+  },
+  "pitch": {
+    "length": 105,
+    "width": 68,
+    "lineWidth": 0.12,
+    "mowStripes": 18,
+    "markings": {
+      "centerCircleRadius": 9.15,
+      "penaltyAreaDepth": 16.5,
+      "penaltyAreaWidth": 40.32,
+      "goalAreaDepth": 5.5,
+      "goalAreaWidth": 18.32,
+      "penaltySpotDistance": 11,
+      "cornerArcRadius": 1,
+      "spotRadius": 0.11
+    },
+    "goal": {
+      "width": 7.32,
+      "height": 2.44,
+      "postDiameter": 0.12,
+      "netDepthBottom": {
+        "value": 2,
+        "estimate": true,
+        "note": "Kale çizgisinden file arkasına, zeminde."
+      },
+      "netDepthTop": {
+        "value": 1,
+        "estimate": true,
+        "note": "Üst direkten file arkasına, üstte."
+      }
+    },
+    "adBoards": {
+      "height": {
+        "value": 0.9,
+        "estimate": true,
+        "note": "LED reklam panosu yüksekliği."
+      },
+      "offsetSides": {
+        "value": 4,
+        "estimate": true,
+        "note": "Yan çizgiden panoya mesafe."
+      },
+      "offsetEnds": {
+        "value": 4,
+        "estimate": true,
+        "note": "Kale çizgisinden panoya mesafe."
+      },
+      "color": "#0e1830"
+    }
+  },
+  "tiers": [
+    {
+      "id": "alt",
+      "name": "Alt",
+      "ring": {
+        "halfX": {
+          "value": 62,
+          "estimate": true,
+          "note": "Ön sıra kale çizgisinden ~9,5 m geride (52,5 + 9,5)."
+        },
+        "halfZ": {
+          "value": 42,
+          "estimate": true,
+          "note": "Ön sıra yan çizgiden ~8 m geride (34 + 8)."
+        },
+        "chamfer": {
+          "value": 10,
+          "estimate": true,
+          "note": "Köşe pahı (Passo haritasındaki köşe kesiminden oranlandı)."
+        },
+        "fillet": {
+          "value": 6,
+          "estimate": true,
+          "note": "Köşe yuvarlatma yarıçapı."
+        }
+      },
+      "profile": {
+        "frontOffset": 0,
+        "frontHeight": {
+          "value": 1.6,
+          "estimate": true,
+          "note": "İlk sıra basamak zemininin çime göre yüksekliği."
+        },
+        "rows": {
+          "value": 25,
+          "estimate": true,
+          "note": "Toplam koltuk 47.911'e yakın çıkacak şekilde ayarlandı (Aşama 2: 47.759)."
+        },
+        "tread": {
+          "value": 0.8,
+          "estimate": true,
+          "note": "Tipik basamak derinliği."
+        },
+        "riser": {
+          "first": {
+            "value": 0.32,
+            "estimate": true,
+            "note": "Ön sıralarda rıht (~22°)."
+          },
+          "last": {
+            "value": 0.4,
+            "estimate": true,
+            "note": "Arka sıralarda rıht (~27°)."
+          }
+        }
+      },
+      "structure": {
+        "fasciaDepth": {
+          "value": 1.6,
+          "estimate": true,
+          "note": "Ön duvar çim seviyesine kadar iner."
+        },
+        "railHeight": {
+          "value": 1.1,
+          "estimate": true,
+          "note": "Ön korkuluk yüksekliği."
+        },
+        "backWallTop": {
+          "value": 13.5,
+          "estimate": true,
+          "note": "Arkadaki loca cephesi üst katın alt yüzeyine kadar çıkar."
+        },
+        "underside": false,
+        "fasciaColor": "#1e2433",
+        "backWallColor": "#2c3a4f",
+        "backWallBands": [
+          {
+            "height": 0.5,
+            "color": "#1d4e9e"
+          },
+          {
+            "height": {
+              "value": 2.2,
+              "estimate": true,
+              "note": "2. loca katı camı."
+            },
+            "color": "#263445"
+          },
+          {
+            "height": {
+              "value": 0.45,
+              "estimate": true,
+              "note": "Loca katları arasındaki reklam bandı."
+            },
+            "color": "#e8ecf1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ust",
+      "name": "Üst",
+      "ring": {
+        "halfX": {
+          "value": 74.5,
+          "estimate": true,
+          "note": "Ön sıra kale çizgisinden ~22 m geride."
+        },
+        "halfZ": {
+          "value": 55,
+          "estimate": true,
+          "note": "Ön sıra yan çizgiden ~21 m geride; alt katın arka sıralarının üstüne taşar."
+        },
+        "chamfer": {
+          "value": 18,
+          "estimate": true,
+          "note": "Üst kat köşeleri belirgin pahlı (fotoğraflar, Passo haritası)."
+        },
+        "fillet": {
+          "value": 3,
+          "estimate": true,
+          "note": "Köşe yuvarlatma yarıçapı."
+        }
+      },
+      "profile": {
+        "frontOffset": 0,
+        "frontHeight": {
+          "value": 15.5,
+          "estimate": true,
+          "note": "Araya iki loca katı giriyor."
+        },
+        "rows": {
+          "value": 29,
+          "estimate": true,
+          "note": "Toplam koltuk 47.911'e yakın çıkacak şekilde ayarlandı (Aşama 2: 47.759)."
+        },
+        "tread": {
+          "value": 0.8,
+          "estimate": true,
+          "note": "Tipik basamak derinliği."
+        },
+        "riser": {
+          "first": {
+            "value": 0.48,
+            "estimate": true,
+            "note": "Ön sıralarda rıht (~31°)."
+          },
+          "last": {
+            "value": 0.56,
+            "estimate": true,
+            "note": "Arka sıralarda rıht (~35°)."
+          }
+        }
+      },
+      "structure": {
+        "fasciaDepth": {
+          "value": 2,
+          "estimate": true,
+          "note": "Üst katın ön alın bandı (reklam bandı)."
+        },
+        "railHeight": {
+          "value": 1.1,
+          "estimate": true,
+          "note": "Ön korkuluk yüksekliği."
+        },
+        "backWallTop": {
+          "value": 33.5,
+          "estimate": true,
+          "note": "Son sıranın arkasındaki duvarın üst kotu."
+        },
+        "underside": true,
+        "fasciaColor": "#e9edf3",
+        "backWallColor": "#d7dbe1"
+      }
+    }
+  ],
+  "stands": [
+    {
+      "id": "maraton",
+      "name": "Maraton",
+      "side": "top",
+      "tiers": {
+        "alt": {
+          "seatColor": "#1f2d63",
+          "aisleColor": "#c9a54a"
+        },
+        "ust": {
+          "seatColor": "#1f2d63",
+          "aisleColor": "#c9a54a"
+        }
+      }
+    },
+    {
+      "id": "spor-toto",
+      "name": "Spor Toto",
+      "side": "right",
+      "tiers": {
+        "alt": {
+          "seatColor": "#1f2d63",
+          "aisleColor": "#c9a54a"
+        },
+        "ust": {
+          "seatColor": "#1f2d63",
+          "aisleColor": "#c9a54a"
+        }
+      }
+    },
+    {
+      "id": "fenerium",
+      "name": "Fenerium",
+      "side": "bottom",
+      "tiers": {
+        "alt": {
+          "seatColor": "#1f2d63",
+          "aisleColor": "#c9a54a"
+        },
+        "ust": {
+          "seatColor": "#1f2d63",
+          "aisleColor": "#c9a54a"
+        }
+      }
+    },
+    {
+      "id": "kuzey",
+      "name": "Kuzey",
+      "side": "left",
+      "tiers": {
+        "alt": {
+          "seatColor": "#1f2d63",
+          "aisleColor": "#c9a54a"
+        },
+        "ust": {
+          "seatColor": "#1f2d63",
+          "aisleColor": "#c9a54a"
+        }
+      }
+    }
+  ],
+  "blocks": [
+    {"stand": "maraton", "tier": "alt", "id": "A", "from": -58.2, "to": -45.4, "estimate": true, "note": "Köşe bloğu. Alt kat blok sınırları Passo haritası oranlarından; koltuklar temsili (auto).", "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "alt", "id": "B", "from": -44.2, "to": -32.6, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "alt", "id": "C", "from": -31.4, "to": -19.8, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "alt", "id": "D", "from": -18.6, "to": -7, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "alt", "id": "E", "from": -5.8, "to": 5.8, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "alt", "id": "F", "from": 7, "to": 18.6, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "alt", "id": "G", "from": 19.8, "to": 31.4, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "alt", "id": "H", "from": 32.6, "to": 44.2, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "alt", "id": "I", "from": 45.4, "to": 58.2, "estimate": true, "note": "Köşe bloğu.", "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "ust", "id": "A", "from": -68.5, "to": -55.9, "estimate": true, "note": "Köşe bloğu. Üst kat blok sınırları Passo haritası oranlarından; koltuklar temsili (auto).", "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "ust", "id": "B", "from": -54.7, "to": -40.1, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "ust", "id": "C", "from": -38.9, "to": -24.3, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "ust", "id": "D", "from": -23.1, "to": -8.5, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "ust", "id": "E", "from": -7.3, "to": 7.3, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "ust", "id": "F", "from": 8.5, "to": 23.1, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "ust", "id": "G", "from": 24.3, "to": 38.9, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "ust", "id": "H", "from": 40.1, "to": 54.7, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "maraton", "tier": "ust", "id": "I", "from": 55.9, "to": 68.5, "estimate": true, "note": "Köşe bloğu.", "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "fenerium", "tier": "alt", "id": "A", "from": -58.2, "to": -45.4, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}], "note": "Köşe bloğu."},
+    {"stand": "fenerium", "tier": "alt", "id": "B", "from": -44.2, "to": -32.6, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "fenerium", "tier": "alt", "id": "C", "from": -31.4, "to": -19.8, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "fenerium", "tier": "alt", "id": "D", "from": -18.6, "to": -7, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "fenerium", "tier": "alt", "id": "E", "from": -5.8, "to": 5.8, "estimate": true, "rows": [{"rows": "1-2", "seats": "1-6,_7,7-12"}, {"rows": "3-19", "seats": "1-8,_2,9-17"}], "category": "vip", "note": "Tünelin arkasındaki VIP deri koltuklar (fotoğraflar). Geniş koltuk, derin basamak ve ortada tünele inen koridor tahmini.", "seatWidth": {"value": 0.6, "estimate": true, "note": "VIP koltuk aralığı."}, "profile": {"rows": {"value": 19, "estimate": true, "note": "Derin basamaklarla aynı derinliğe 19 sıra sığar."}, "tread": {"value": 1, "estimate": true, "note": "VIP basamak derinliği."}, "riser": {"first": {"value": 0.4, "estimate": true}, "last": {"value": 0.5, "estimate": true}}}},
+    {"stand": "fenerium", "tier": "alt", "id": "F", "from": 7, "to": 18.6, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "fenerium", "tier": "alt", "id": "G", "from": 19.8, "to": 31.4, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "fenerium", "tier": "alt", "id": "H", "from": 32.6, "to": 44.2, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "fenerium", "tier": "alt", "id": "I", "from": 45.4, "to": 58.2, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}], "note": "Köşe bloğu."},
+    {"stand": "fenerium", "tier": "ust", "id": "A", "from": -68.5, "to": -55.9, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}], "note": "Köşe bloğu."},
+    {"stand": "fenerium", "tier": "ust", "id": "B", "from": -54.7, "to": -40.1, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "fenerium", "tier": "ust", "id": "C", "from": -38.9, "to": -24.3, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "fenerium", "tier": "ust", "id": "D", "from": -23.1, "to": -8.5, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "fenerium", "tier": "ust", "id": "E", "from": -7.3, "to": 7.3, "estimate": true, "rows": [{"rows": "1-14", "seats": "auto"}, {"gap": 15}], "category": "basin", "note": "Passo haritasında E'nin arka yarısı BASIN. Arka 15 sıra koltuksuz (basın masaları) varsayıldı."},
+    {"stand": "fenerium", "tier": "ust", "id": "F", "from": 8.5, "to": 23.1, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "fenerium", "tier": "ust", "id": "G", "from": 24.3, "to": 38.9, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "fenerium", "tier": "ust", "id": "H", "from": 40.1, "to": 54.7, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "fenerium", "tier": "ust", "id": "I", "from": 55.9, "to": 68.5, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}], "note": "Köşe bloğu."},
+    {"stand": "spor-toto", "tier": "alt", "id": "I", "from": -38.2, "to": -28.9, "estimate": true, "note": "Köşe bloğu. Kale arkası blok sınırları Passo haritası oranlarından (I/P köşe, J/O dar).", "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "alt", "id": "J", "from": -27.7, "to": -21.6, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "alt", "id": "K", "from": -20.4, "to": -11.1, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "alt", "id": "L", "from": -9.9, "to": -0.6, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "alt", "id": "M", "from": 0.6, "to": 9.9, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "alt", "id": "N", "from": 11.1, "to": 20.4, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "alt", "id": "O", "from": 21.6, "to": 27.7, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "alt", "id": "P", "from": 28.9, "to": 38.2, "estimate": true, "note": "Köşe bloğu.", "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "ust", "id": "A", "from": -49, "to": -36.2, "estimate": true, "note": "Köşe bloğu.", "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "ust", "id": "B", "from": -35, "to": -24.3, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "ust", "id": "C", "from": -23.1, "to": -12.5, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "ust", "id": "D", "from": -11.3, "to": -0.6, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "ust", "id": "E", "from": 0.6, "to": 11.3, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "ust", "id": "F", "from": 12.5, "to": 23.1, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "ust", "id": "G", "from": 24.3, "to": 35, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "spor-toto", "tier": "ust", "id": "H", "from": 36.2, "to": 49, "estimate": true, "note": "Köşe bloğu.", "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "alt", "id": "I", "from": -38.2, "to": -28.9, "estimate": true, "note": "Köşe bloğu.", "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "alt", "id": "J", "from": -27.7, "to": -21.6, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "alt", "id": "K", "from": -20.4, "to": -11.1, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "alt", "id": "L", "from": -9.9, "to": -0.6, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "alt", "id": "M", "from": 0.6, "to": 9.9, "estimate": true, "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "alt", "id": "N", "from": 11.1, "to": 20.4, "estimate": true, "category": "misafir-kismen", "note": "Passo haritasında N'nin Maraton tarafı misafir bölümünde.", "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "alt", "id": "O", "from": 21.6, "to": 27.7, "estimate": true, "category": "misafir", "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "alt", "id": "P", "from": 28.9, "to": 38.2, "estimate": true, "note": "Köşe bloğu.", "category": "misafir", "rows": [{"rows": "1-25", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "ust", "id": "A", "from": -49, "to": -36.2, "estimate": true, "note": "Köşe bloğu.", "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "ust", "id": "B", "from": -35, "to": -24.3, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "ust", "id": "C", "from": -23.1, "to": -12.5, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "ust", "id": "D", "from": -11.3, "to": -0.6, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "ust", "id": "E", "from": 0.6, "to": 11.3, "estimate": true, "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "ust", "id": "F", "from": 12.5, "to": 23.1, "estimate": true, "category": "misafir-kismen", "note": "Passo haritasında F'nin Maraton tarafı misafir bölümünde.", "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "ust", "id": "G", "from": 24.3, "to": 35, "estimate": true, "category": "misafir", "rows": [{"rows": "1-29", "seats": "auto"}]},
+    {"stand": "kuzey", "tier": "ust", "id": "H", "from": 36.2, "to": 49, "estimate": true, "note": "Köşe bloğu.", "category": "misafir", "rows": [{"rows": "1-29", "seats": "auto"}]}
+  ],
+  "seatPatterns": [
+    {
+      "id": "maraton-yazi",
+      "stand": "maraton",
+      "tier": "ust",
+      "text": "FENERBAHÇE",
+      "color": "#efc416",
+      "from": {
+        "value": -42,
+        "estimate": true,
+        "note": "Yazının başladığı/bittiği yer, tribün ortasından metre (12numara.org görüntüsünden)."
+      },
+      "to": {
+        "value": 42,
+        "estimate": true
+      },
+      "rows": {
+        "value": "7-26",
+        "estimate": true
+      }
+    },
+    {
+      "id": "fenerium-yazi",
+      "stand": "fenerium",
+      "tier": "ust",
+      "text": "FENER  BAHÇE",
+      "color": "#efc416",
+      "from": {
+        "value": -50,
+        "estimate": true,
+        "note": "Ortadaki basın kutusu yazıyı FENER | BAHÇE diye böler; araya iki boşluk konur."
+      },
+      "to": {
+        "value": 50,
+        "estimate": true
+      },
+      "rows": {
+        "value": "7-26",
+        "estimate": true
+      }
+    }
+  ],
+  "roof": {
+    "inner": {
+      "halfX": {
+        "value": 60.5,
+        "estimate": true,
+        "note": "Çatı açıklığı uydu görüntüsünden ~121 m."
+      },
+      "halfZ": {
+        "value": 44,
+        "estimate": true,
+        "note": "Çatı açıklığı uydu görüntüsünden ~88 m."
+      },
+      "chamfer": {
+        "value": 8,
+        "estimate": true
+      },
+      "fillet": {
+        "value": 10,
+        "estimate": true,
+        "note": "Açıklığın köşeleri yuvarlak."
+      }
+    },
+    "outer": {
+      "halfX": {
+        "value": 101,
+        "estimate": true,
+        "note": "Çatı dış sınırı uydu görüntüsünden ~202 m."
+      },
+      "halfZ": {
+        "value": 82,
+        "estimate": true,
+        "note": "Çatı dış sınırı uydu görüntüsünden ~164 m."
+      },
+      "chamfer": {
+        "value": 30,
+        "estimate": true,
+        "note": "Dış kenar sekizgen (uydu, Sketchfab)."
+      },
+      "fillet": {
+        "value": 2,
+        "estimate": true
+      }
+    },
+    "innerHeight": {
+      "value": 38.5,
+      "estimate": true,
+      "note": "Ön kenar kotu."
+    },
+    "outerHeight": {
+      "value": 36,
+      "estimate": true,
+      "note": "Dış kenar kotu; üst katın arka duvarının üstünde kalır."
+    },
+    "edgeDepth": {
+      "value": 1.2,
+      "estimate": true
+    },
+    "outerEdgeDepth": {
+      "value": 3,
+      "estimate": true
+    },
+    "color": "#e7e2d6",
+    "ribs": {
+      "spacing": {
+        "value": 9,
+        "estimate": true,
+        "note": "Membran tonozları arasındaki ışınsal kirişler."
+      },
+      "depth": {
+        "value": 1,
+        "estimate": true
+      },
+      "width": 0.35,
+      "color": "#b4b8be"
+    },
+    "catwalk": {
+      "offset": {
+        "value": 2,
+        "estimate": true
+      },
+      "drop": {
+        "value": 2.5,
+        "estimate": true,
+        "note": "Ön kenarın altındaki ışık köprüsü."
+      },
+      "size": {
+        "value": 1.2,
+        "estimate": true
+      },
+      "color": "#8f949b"
+    },
+    "trusses": [
+      {
+        "id": "maraton",
+        "side": "top",
+        "distance": {
+          "value": 68,
+          "estimate": true,
+          "note": "Uydu görüntüsünden."
+        },
+        "from": {
+          "value": -80,
+          "estimate": true
+        },
+        "to": {
+          "value": 80,
+          "estimate": true
+        },
+        "height": {
+          "value": 7,
+          "estimate": true
+        },
+        "panel": {
+          "value": 8,
+          "estimate": true
+        }
+      },
+      {
+        "id": "fenerium",
+        "side": "bottom",
+        "distance": {
+          "value": 68,
+          "estimate": true
+        },
+        "from": {
+          "value": -80,
+          "estimate": true
+        },
+        "to": {
+          "value": 80,
+          "estimate": true
+        },
+        "height": {
+          "value": 7,
+          "estimate": true
+        },
+        "panel": {
+          "value": 8,
+          "estimate": true
+        }
+      },
+      {
+        "id": "spor-toto",
+        "side": "right",
+        "distance": {
+          "value": 86,
+          "estimate": true,
+          "note": "Uydu görüntüsünden."
+        },
+        "from": {
+          "value": -56,
+          "estimate": true
+        },
+        "to": {
+          "value": 56,
+          "estimate": true
+        },
+        "height": {
+          "value": 7,
+          "estimate": true
+        },
+        "panel": {
+          "value": 8,
+          "estimate": true
+        }
+      },
+      {
+        "id": "kuzey",
+        "side": "left",
+        "distance": {
+          "value": 86,
+          "estimate": true
+        },
+        "from": {
+          "value": -56,
+          "estimate": true
+        },
+        "to": {
+          "value": 56,
+          "estimate": true
+        },
+        "height": {
+          "value": 7,
+          "estimate": true
+        },
+        "panel": {
+          "value": 8,
+          "estimate": true
+        }
+      }
+    ],
+    "trussMember": 0.5,
+    "trussColor": "#c9ccd1"
+  },
+  "structures": [
+    {
+      "id": "yedek-kulubesi-1",
+      "name": "Yedek kulübesi",
+      "type": "box",
+      "at": {
+        "tier": "alt",
+        "stand": "fenerium",
+        "u": -9.5,
+        "d": {
+          "value": -2.2,
+          "estimate": true,
+          "note": "Tribün önü ile reklam panoları arasında."
+        },
+        "y": 0
+      },
+      "size": [
+        {
+          "value": 11,
+          "estimate": true,
+          "note": "Uzunluk."
+        },
+        {
+          "value": 2.1,
+          "estimate": true,
+          "note": "Yükseklik."
+        },
+        {
+          "value": 2.6,
+          "estimate": true,
+          "note": "Derinlik."
+        }
+      ],
+      "color": "#e8ebef",
+      "estimate": true,
+      "note": "Fenerium önünde, tünelin iki yanında (fotoğraflar)."
+    },
+    {
+      "id": "yedek-kulubesi-2",
+      "name": "Yedek kulübesi",
+      "type": "box",
+      "at": {
+        "tier": "alt",
+        "stand": "fenerium",
+        "u": 9.5,
+        "d": {
+          "value": -2.2,
+          "estimate": true
+        },
+        "y": 0
+      },
+      "size": [
+        {
+          "value": 11,
+          "estimate": true
+        },
+        {
+          "value": 2.1,
+          "estimate": true
+        },
+        {
+          "value": 2.6,
+          "estimate": true
+        }
+      ],
+      "color": "#e8ebef",
+      "estimate": true
+    },
+    {
+      "id": "oyuncu-tuneli",
+      "name": "Oyuncu tüneli",
+      "type": "box",
+      "at": {
+        "tier": "alt",
+        "stand": "fenerium",
+        "u": 0,
+        "d": {
+          "value": -1.9,
+          "estimate": true
+        },
+        "y": 0
+      },
+      "size": [
+        {
+          "value": 3,
+          "estimate": true
+        },
+        {
+          "value": 2.6,
+          "estimate": true
+        },
+        {
+          "value": 3.8,
+          "estimate": true
+        }
+      ],
+      "color": "#2457b5",
+      "estimate": true,
+      "note": "Fenerium E bloğunun önündeki açılır tünel."
+    },
+    {
+      "id": "ekran-maraton-kuzey",
+      "name": "Köşe ekranı",
+      "type": "box",
+      "at": {
+        "tier": "ust",
+        "stand": "maraton",
+        "u": -69.1,
+        "d": {
+          "value": -0.6,
+          "estimate": true
+        },
+        "y": {
+          "value": 14,
+          "estimate": true,
+          "note": "Ekranın alt kotu."
+        }
+      },
+      "size": [
+        {
+          "value": 8,
+          "estimate": true,
+          "note": "Genişlik."
+        },
+        {
+          "value": 5,
+          "estimate": true,
+          "note": "Yükseklik."
+        },
+        0.8
+      ],
+      "color": "#1a1f29",
+      "frontColor": "#24365e",
+      "estimate": true,
+      "note": "Fotoğraflarda üst kat köşelerinde ekran var. Konum ve boyut tahmini; köşe bloklarının ön sıra görüşünü etkileyebilir."
+    },
+    {
+      "id": "ekran-maraton-spor-toto",
+      "name": "Köşe ekranı",
+      "type": "box",
+      "at": {
+        "tier": "ust",
+        "stand": "maraton",
+        "u": 69.1,
+        "d": {
+          "value": -0.6,
+          "estimate": true
+        },
+        "y": {
+          "value": 14,
+          "estimate": true,
+          "note": "Ekranın alt kotu."
+        }
+      },
+      "size": [
+        {
+          "value": 8,
+          "estimate": true,
+          "note": "Genişlik."
+        },
+        {
+          "value": 5,
+          "estimate": true,
+          "note": "Yükseklik."
+        },
+        0.8
+      ],
+      "color": "#1a1f29",
+      "frontColor": "#24365e",
+      "estimate": true
+    },
+    {
+      "id": "ekran-fenerium-spor-toto",
+      "name": "Köşe ekranı",
+      "type": "box",
+      "at": {
+        "tier": "ust",
+        "stand": "fenerium",
+        "u": -69.1,
+        "d": {
+          "value": -0.6,
+          "estimate": true
+        },
+        "y": {
+          "value": 14,
+          "estimate": true,
+          "note": "Ekranın alt kotu."
+        }
+      },
+      "size": [
+        {
+          "value": 8,
+          "estimate": true,
+          "note": "Genişlik."
+        },
+        {
+          "value": 5,
+          "estimate": true,
+          "note": "Yükseklik."
+        },
+        0.8
+      ],
+      "color": "#1a1f29",
+      "frontColor": "#24365e",
+      "estimate": true
+    },
+    {
+      "id": "ekran-fenerium-kuzey",
+      "name": "Köşe ekranı",
+      "type": "box",
+      "at": {
+        "tier": "ust",
+        "stand": "fenerium",
+        "u": 69.1,
+        "d": {
+          "value": -0.6,
+          "estimate": true
+        },
+        "y": {
+          "value": 14,
+          "estimate": true,
+          "note": "Ekranın alt kotu."
+        }
+      },
+      "size": [
+        {
+          "value": 8,
+          "estimate": true,
+          "note": "Genişlik."
+        },
+        {
+          "value": 5,
+          "estimate": true,
+          "note": "Yükseklik."
+        },
+        0.8
+      ],
+      "color": "#1a1f29",
+      "frontColor": "#24365e",
+      "estimate": true
+    }
+  ]
+}

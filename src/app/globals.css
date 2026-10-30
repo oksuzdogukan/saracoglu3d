@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lacivert: #0b1f4b;
+  --color-sari: #f5c400;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: #dce8f3;
+  color: var(--color-lacivert);
+  font-family: var(--font-sans);
+  overscroll-behavior: none;
+}
